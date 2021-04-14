@@ -14,7 +14,7 @@ namespace AllCardsOnDeck
                 var nextUpCard = deckOfCards[index];
 
                 var randomNumberGenerator = new Random();
-                var randomNumber = randomNumberGenerator.Next(cardCount - 1);
+                var randomNumber = randomNumberGenerator.Next(cardCount);
 
                 deckOfCards.RemoveAt(index);
                 deckOfCards.Insert(randomNumber, nextUpCard);
