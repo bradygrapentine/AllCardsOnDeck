@@ -19,8 +19,26 @@ namespace AllCardsOnDeck
                 deckOfCards.RemoveAt(index);
                 deckOfCards.Insert(randomNumber, nextUpCard);
             }
-            Console.WriteLine(deckOfCards[0]);
-            Console.WriteLine(deckOfCards[1]);
+            var playerHand1 = new List<string>();
+            var playerHand2 = new List<string>();
+
+            for (var index2 = 0; index2 < 4; index2++)
+            {
+                if (index2 % 2 == 0)
+                {
+                    playerHand1.Add(deckOfCards[index2]);
+                }
+                else
+                {
+                    playerHand2.Add(deckOfCards[index2]);
+                }
+            }
+            Console.Write("Player 1 Hand: ");
+            Console.Write(playerHand1[0] + ", ");
+            Console.WriteLine(playerHand1[1]);
+            Console.Write("Player 2 Hand: ");
+            Console.Write(playerHand2[0] + ", ");
+            Console.WriteLine(playerHand2[1]);
         }
     }
 }
