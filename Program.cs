@@ -28,8 +28,15 @@ namespace AllCardsOnDeck
                 var randomNumberGenerator = new Random();
                 var randomNumber = randomNumberGenerator.Next(cardCount);
 
+                var cardToBeSwapped = deckOfCards[randomNumber];
+
                 deckOfCards.RemoveAt(index);
                 deckOfCards.Insert(randomNumber, nextUpCard);
+                deckOfCards.Insert(index, cardToBeSwapped);
+            }
+            foreach (var i in deckOfCards)
+            {
+                Console.WriteLine(i);
             }
             // //             var playerHand1 = new List<string>();
             // //             var playerHand2 = new List<string>();
